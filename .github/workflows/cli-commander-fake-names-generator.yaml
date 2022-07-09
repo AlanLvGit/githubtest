@@ -8,7 +8,7 @@ on:
     paths:
       - 'cli/commander/fake-names-generator/**'
   schedule:
-    # Every day at 1am
+    # Every day at 2am
     - cron:  '0 1 * * *'
 
 jobs:
