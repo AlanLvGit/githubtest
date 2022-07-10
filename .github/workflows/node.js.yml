@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
        run:
-         working-directory: ./alan2-VirtualBox
+         working-directory: ./server
 
     strategy:
       matrix:
@@ -29,7 +29,7 @@ jobs:
         with:
     node-version: ${{ matrix.node-version }}
     cache: 'npm'
-    cache-dependency-path: './alan2-VirtualBox/package-lock.json'
+    cache-dependency-path: './server/package-lock.json'
    - run: npm ci
     - run: npm run build --if-present
     - run: npm test
