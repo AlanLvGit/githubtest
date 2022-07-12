@@ -1,0 +1,16 @@
+name: NodeJS with Gulp
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  myjob:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dreamcodez/dead-simple-nodejs@1
+        with:
+          NODE_VERSION: 16.1.0
+          NODE_DISTRO: linux-x64 # optional
